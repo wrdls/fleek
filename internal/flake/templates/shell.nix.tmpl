@@ -1,15 +1,5 @@
 { pkgs, misc, ... }: {
   # DO NOT EDIT: This file is managed by fleek. Manual changes will be overwritten.
-    {{- $programs := .Bling.FinalPrograms .Config -}}
-    {{- $programmap := .Bling.ProgramMap -}}
-    {{- range $index, $element := $programs -}}
-    {{ $prog := index $programmap $element -}}
-    {{- if $prog }}
-    {{- range  $v, $line := $prog.ConfigLines}}
-    {{ $line.Key }} = {{ $line.Value  }};
-    {{ end -}}
-    {{ end -}}
-    {{ end -}}
 # {{ .Config.Shell }}
 {{- if eq .Config.Shell "bash" }}
   programs.bash.profileExtra = ''

@@ -59,7 +59,6 @@ func initialize(cmd *cobra.Command, _ []string) error {
 		return usererr.WithUserMessage(err, app.Trans("flake.initializingTemplates"))
 	}
 
-	fl.Config.Bling = cmd.Flag(app.Trans("init.levelFlag")).Value.String()
 	err = fl.Create(force, true)
 	if err != nil {
 		return usererr.WithUserMessage(err, app.Trans("flake.creating"))

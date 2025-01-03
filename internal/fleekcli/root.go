@@ -138,9 +138,6 @@ func RootCmd() *cobra.Command {
 	removeCmd := RemoveCommand()
 	removeCmd.GroupID = packageGroup.ID
 
-	showCmd := ShowCmd()
-	showCmd.GroupID = fleekGroup.ID
-
 	applyCmd := ApplyCommand()
 	applyCmd.GroupID = fleekGroup.ID
 
@@ -158,8 +155,6 @@ func RootCmd() *cobra.Command {
 	searchCmd := SearchCommand()
 	searchCmd.GroupID = packageGroup.ID
 
-	infoCmd := InfoCommand()
-	infoCmd.GroupID = packageGroup.ID
 	writeCmd := WriteCommand()
 	writeCmd.GroupID = fleekGroup.ID
 	manCmd := ManCommand()
@@ -167,7 +162,6 @@ func RootCmd() *cobra.Command {
 	docsCmd := genDocsCmd()
 	command.AddCommand(docsCmd)
 	command.AddCommand(manCmd)
-	command.AddCommand(showCmd)
 
 	command.AddCommand(addCmd)
 	command.AddCommand(removeCmd)
@@ -179,7 +173,6 @@ func RootCmd() *cobra.Command {
 
 	command.AddCommand(ejectCmd)
 	command.AddCommand(searchCmd)
-	command.AddCommand(infoCmd)
 	command.AddCommand(generateCmd)
 	command.AddCommand(writeCmd)
 	command.AddCommand(VersionCmd())

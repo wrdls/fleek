@@ -30,7 +30,6 @@ type Data struct {
 	Config   *fleek.Config
 	UserName string
 	Home     string
-	Bling    *fleek.Bling
 }
 type SystemData struct {
 	System fleek.System
@@ -97,25 +96,7 @@ func (f *Flake) Create(force bool, symlink bool) error {
 	if err != nil {
 		return err
 	}
-	var bling *fleek.Bling
 
-	switch f.Config.Bling {
-	case "high":
-		bling, err = fleek.HighBling()
-	case "default":
-		bling, err = fleek.DefaultBling()
-	case "low":
-		bling, err = fleek.LowBling()
-	case "none":
-		bling, err = fleek.NoBling()
-	default:
-		bling, err = fleek.DefaultBling()
-	}
-	if err != nil {
-		return err
-	}
-
-	fin.Logger.Info("", fin.Logger.Args(f.app.Trans("init.blingLevel"), f.Config.Bling))
 	err = f.Config.WriteInitialConfig(force, symlink)
 	if err != nil {
 		return err
@@ -135,7 +116,6 @@ func (f *Flake) Create(force bool, symlink bool) error {
 	user := sys.User
 	data := Data{
 		Config: f.Config,
-		Bling:  bling,
 	}
 
 	err = f.writeFile("templates/flake.nix.tmpl", "flake.nix", data, force)
@@ -317,26 +297,8 @@ func (f *Flake) Write(message string, writeHost, writeUser bool) error {
 		return err
 	}
 
-	var bling *fleek.Bling
-	switch f.Config.Bling {
-	case "high":
-		bling, err = fleek.HighBling()
-	case "default":
-		bling, err = fleek.DefaultBling()
-	case "low":
-		bling, err = fleek.LowBling()
-	case "none":
-		bling, err = fleek.NoBling()
-	default:
-		bling, err = fleek.DefaultBling()
-	}
-	if err != nil {
-		return err
-	}
-
 	data := Data{
 		Config: f.Config,
-		Bling:  bling,
 	}
 
 	err = f.ReadConfig("")

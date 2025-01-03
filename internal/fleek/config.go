@@ -23,13 +23,6 @@ var (
 	operatingSystems = []string{"linux", "darwin"}
 	architectures    = []string{"aarch64", "x86_64"}
 	shells           = []string{"bash", "zsh"}
-	blingLevels      = []string{"none", "low", "default", "high"}
-	LowPackages      = []string{"htop", "git", "github-cli", "glab"}
-	DefaultPackages  = []string{"fzf", "ripgrep", "vscode", "just"}
-	HighPackages     = []string{"lazygit", "jq", "yq-go", "neovim", "neofetch", "btop", "cheat"}
-	LowPrograms      = []string{"starship"}
-	DefaultPrograms  = []string{"direnv"}
-	HighPrograms     = []string{"eza", "bat", "atuin", "zoxide"}
 )
 
 var systemAliases = map[string]string{
@@ -49,14 +42,10 @@ type Config struct {
 	Unfree     bool   `yaml:"unfree"`
 	// bash or zsh
 	Shell string `yaml:"shell"`
-	// low, default, high
-	Bling    string              `yaml:"bling"`
 	Name     string              `yaml:"name"`
 	Overlays map[string]*Overlay `yaml:",flow"`
 	Packages []string            `yaml:",flow"`
 	Programs []string            `yaml:",flow"`
-	// issue 211, remove or block bling packages
-	Blocklist []string          `yaml:"blocklist,flow"`
 	Aliases   map[string]string `yaml:",flow"`
 	Paths     []string          `yaml:"paths"`
 	Ejected   bool              `yaml:"ejected"`
@@ -68,10 +57,6 @@ type Config struct {
 	Track       string    `yaml:"track"`
 	AllowBroken bool      `yaml:"allow_broken"`
 	AutoGC      bool      `yaml:"auto_gc"`
-}
-
-func Levels() []string {
-	return blingLevels
 }
 
 type Git struct {
@@ -273,7 +258,6 @@ func NewUser() (*User, error) {
 var (
 	ErrMissingFlakeDir        = errors.New("fleek.yml: missing `flakedir`")
 	ErrInvalidShell           = errors.New("fleek.yml: invalid shell, valid shells are: " + strings.Join(shells, ", "))
-	ErrInvalidBling           = errors.New("fleek.yml: invalid bling level, valid levels are: " + strings.Join(blingLevels, ", "))
 	ErrorInvalidArch          = errors.New("fleek.yml: invalid architecture, valid architectures are: " + strings.Join(architectures, ", "))
 	ErrInvalidOperatingSystem = errors.New("fleek.yml: invalid OS, valid operating systems are: " + strings.Join(operatingSystems, ", "))
 	ErrPackageNotFound        = errors.New("package not found in configuration file")
@@ -292,9 +276,6 @@ func (c *Config) Validate() error {
 	}
 	if !isValueInList(c.Shell, shells) {
 		return ErrInvalidShell
-	}
-	if !isValueInList(c.Bling, blingLevels) {
-		return ErrInvalidBling
 	}
 	for _, sys := range c.Systems {
 		if !isValueInList(sys.Arch, architectures) {
