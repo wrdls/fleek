@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ublue-os/fleek/internal/envir"
+	"github.com/wrdls/fleek/internal/envir"
 )
 
 func TestCheckVersion(t *testing.T) {

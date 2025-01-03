@@ -9,7 +9,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
-	"github.com/ublue-os/fleek/fin"
+	"github.com/wrdls/fleek/fin"
 )
 
 func genDocsCmd() *cobra.Command {

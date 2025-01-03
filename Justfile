@@ -20,7 +20,7 @@ snapshot:
   goreleaser release --clean --snapshot
 
 build:
-  @go build -a -tags netgo -ldflags '-w -extldflags "-static"' github.com/ublue-os/fleek/cmd/fleek
+  @go build -a -tags netgo -ldflags '-w -extldflags "-static"' github.com/wrdls/fleek/cmd/fleek
 
 examples:
   [ -e "./fleek" ] || just build
@@ -28,7 +28,7 @@ examples:
   just example "low"
   just example "default"
   just example "high"
-  
+
 
 tag version:
   ./scripts/create-release.sh {{version}}

@@ -27,9 +27,9 @@ builds:
       - arm64
     ldflags:
       - -w -extldflags "-static"
-      - -s -w -X github.com/ublue-os/fleek/internal/build.Version={{.Version}}
-      - -s -w -X github.com/ublue-os/fleek/internal/build.Commit={{.Commit}}
-      - -s -w -X github.com/ublue-os/fleek/internal/build.CommitDate={{.CommitDate}}
+      - -s -w -X github.com/wrdls/fleek/internal/build.Version={{.Version}}
+      - -s -w -X github.com/wrdls/fleek/internal/build.Commit={{.Commit}}
+      - -s -w -X github.com/wrdls/fleek/internal/build.CommitDate={{.CommitDate}}
     flags:
       - -tags=netgo
       - -a
@@ -67,17 +67,15 @@ nightly:
   # Default is `false`.
   keep_single_release: true
 
-
 archives:
   - files:
       - no-files-will-match-* # Glob that does not match to create archive with only binaries.
-    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
 checksum:
   name_template: 'checksums.txt'
   algorithm: sha256
 snapshot:
-  name_template: "{{ incpatch .Version }}-next"
-
+  name_template: '{{ incpatch .Version }}-next'
 # The lines beneath this are called `modelines`. See `:help modeline`
 # Feel free to remove those if you don't want/use them.
 # yaml-language-server: $schema=https://goreleaser.com/static/schema-pro.json

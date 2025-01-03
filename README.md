@@ -1,15 +1,14 @@
 # Fleek - "Home as Code" for Humans
 
 ** Fleek will no longer be maintained as of March 2024 **
-* Please use Nix Home Manager instead *
+
+- Please use Nix Home Manager instead \*
 
 [![FlakeHub](https://img.shields.io/endpoint?url=https://flakehub.com/f/ublue-os/fleek/badge)](https://flakehub.com/flake/ublue-os/fleek)
 
-
-
 Fleek is an all-in-one management system for everything you need to be productive on your computer.
 
-Status: BETA.  Probably won't eat your computer. Probably won't break your system, at least beyond simple recoverability.
+Status: BETA. Probably won't eat your computer. Probably won't break your system, at least beyond simple recoverability.
 
 What follows is a brief overview and quick start. See full documentation at [https://getfleek.dev](https://getfleek.dev).
 
@@ -128,14 +127,13 @@ Now that you've seen some of the possibile changes you can make, edit your `~/.f
 
 To apply your changes run `fleek apply`. `fleek` spins for a bit, and makes all the changes you requested. You may need to close and re-open your terminal application to see some of the changes, particularly if you add or remove fonts.
 
-
 That's the quick start! From here, you can try `fleek add` to add packages from the CLI, `fleek search` to search for available packages. The full documentation is on the [fleek website](https://getfleek.dev).
 
 ### Behind the Scenes
 
 Fancy animated gifs and long-winded README's are great, but what really happens when you run `fleek apply` the first time? I'm glad you asked...
 
-1. `fleek` creates a [nix home-manager][def] configuration based on the [templates here](https://github.com/ublue-os/fleek/blob/main/internal/flake/templates/home.nix.tmpl).
+1. `fleek` creates a [nix home-manager][def] configuration based on the [templates here](https://github.com/wrdls/fleek/blob/main/internal/flake/templates/home.nix.tmpl).
 1. `fleek` compiles the templates and writes them to disk at `~/.local/share/fleek` by default.
 1. `fleek` calls the `nix` command, which does `nix` things to download and install all the packages in your `.fleek.yml` file.
 1. The libraries and binaries you specify get installed in the `/nix` folder, and symlinked into your very own personal `nix` profile. This is stored in your $HOME directory under `~/.nix-profile`.
@@ -169,7 +167,7 @@ Within 24 hours I took the plunge and dog-fooded `fleek` on my development lapto
 
 I spent the next two weeks tweaking the user experience and testing over and over. Countless virtual machines were provisioned and destroyed.
 
-| *countless*
+| _countless_
 
 And now we're here. `fleek` is ready for a broader audience than me and Jorge - who is the biggest inspriation for all the features `fleek` has, and maybe just as importantly, doesn't have.
 
@@ -182,7 +180,7 @@ This flake template was the thing that got everything started!
 - [flake template](https://github.com/Misterio77/nix-starter-configs)
 - [template license](https://github.com/Misterio77/nix-starter-configs/blob/main/LICENSE)
 
-In my third rewrite, I looked at devbox and loved how they organized everything. I *borrowed* a LOT from this. And by *borrowed* I mean outright copy & pasted. Many supporting functions in this code were written by the JetPack team, and very lightly modified by me.
+In my third rewrite, I looked at devbox and loved how they organized everything. I _borrowed_ a LOT from this. And by _borrowed_ I mean outright copy & pasted. Many supporting functions in this code were written by the JetPack team, and very lightly modified by me.
 
 - [devbox](https://github.com/jetpack-io/devbox)
 - [devbox license](https://github.com/jetpack-io/devbox/blob/main/LICENSE)

@@ -1,8 +1,6 @@
-module github.com/ublue-os/fleek
+module github.com/wrdls/fleek
 
-go 1.21
-
-toolchain go1.21.1
+go 1.23
 
 require (
 	github.com/charmbracelet/lipgloss v0.9.1

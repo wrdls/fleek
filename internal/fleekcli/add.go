@@ -6,9 +6,9 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
-	"github.com/ublue-os/fleek/fin"
-	"github.com/ublue-os/fleek/internal/cache"
-	"github.com/ublue-os/fleek/internal/flake"
+	"github.com/wrdls/fleek/fin"
+	"github.com/wrdls/fleek/internal/cache"
+	"github.com/wrdls/fleek/internal/flake"
 )
 
 func AddCommand() *cobra.Command {

@@ -8,10 +8,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ublue-os/fleek/fin"
-	"github.com/ublue-os/fleek/internal/cmdutil"
-	"github.com/ublue-os/fleek/internal/fleek"
-	"github.com/ublue-os/fleek/internal/xdg"
+	"github.com/wrdls/fleek/fin"
+	"github.com/wrdls/fleek/internal/cmdutil"
+	"github.com/wrdls/fleek/internal/fleek"
+	"github.com/wrdls/fleek/internal/xdg"
 )
 
 type PackageCache struct {

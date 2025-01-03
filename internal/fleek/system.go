@@ -9,7 +9,7 @@ import (
 
 	"os/user"
 
-	"github.com/ublue-os/fleek/fin"
+	"github.com/wrdls/fleek/fin"
 )
 
 var ErrSysNotFound = errors.New("system not found")

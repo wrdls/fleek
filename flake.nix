@@ -46,9 +46,9 @@
         ldflags = [
           "-s"
           "-w"
-          "-X github.com/ublue-os/fleek/internal/build.Version=${version}"
-          "-X github.com/ublue-os/fleek/internal/build.Commit=${self.rev}"
-          "-X github.com/ublue-os/fleek/internal/build.CommitDate=1970-01-01T00:00:00Z"
+          "-X github.com/wrdls/fleek/internal/build.Version=${version}"
+          "-X github.com/wrdls/fleek/internal/build.Commit=${self.rev}"
+          "-X github.com/wrdls/fleek/internal/build.CommitDate=1970-01-01T00:00:00Z"
           "-extldflags=-static"
         ];
         tags = [

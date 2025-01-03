@@ -6,7 +6,7 @@ import (
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
-	"github.com/ublue-os/fleek/internal/build"
+	"github.com/wrdls/fleek/internal/build"
 )
 
 // HelpFunc is a drop in replacement for spf13/cobra `HelpFunc`

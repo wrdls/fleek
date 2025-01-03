@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ublue-os/fleek/internal/fleekcli"
+	"github.com/wrdls/fleek/internal/fleekcli"
 )
 
 func main() {

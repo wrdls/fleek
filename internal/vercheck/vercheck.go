@@ -18,12 +18,12 @@ import (
 	"github.com/samber/lo"
 	"golang.org/x/mod/semver"
 
-	"github.com/ublue-os/fleek/internal/build"
-	"github.com/ublue-os/fleek/internal/cmdutil"
-	"github.com/ublue-os/fleek/internal/envir"
-	"github.com/ublue-os/fleek/internal/fleekcli/usererr"
-	"github.com/ublue-os/fleek/internal/ux"
-	"github.com/ublue-os/fleek/internal/xdg"
+	"github.com/wrdls/fleek/internal/build"
+	"github.com/wrdls/fleek/internal/cmdutil"
+	"github.com/wrdls/fleek/internal/envir"
+	"github.com/wrdls/fleek/internal/fleekcli/usererr"
+	"github.com/wrdls/fleek/internal/ux"
+	"github.com/wrdls/fleek/internal/xdg"
 )
 
 // Keep this in-sync with latest version in launch.sh.

@@ -11,9 +11,9 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/spf13/cobra"
-	"github.com/ublue-os/fleek/internal/debug"
-	"github.com/ublue-os/fleek/internal/fleekcli/usererr"
-	"github.com/ublue-os/fleek/internal/ux"
+	"github.com/wrdls/fleek/internal/debug"
+	"github.com/wrdls/fleek/internal/fleekcli/usererr"
+	"github.com/wrdls/fleek/internal/ux"
 )
 
 type Executable interface {
@@ -93,7 +93,7 @@ func (ex *midcobraExecutable) Execute(ctx context.Context, args []string) int {
 			if !debug.IsEnabled() {
 				ux.Ferror(ex.cmd.ErrOrStderr(), "There was an internal error. "+
 					"Run with FLEEK_DEBUG=1 for a detailed error message, and consider reporting it at "+
-					"https://github.com/ublue-os/fleek/issues\n")
+					"https://github.com/wrdls/fleek/issues\n")
 			}
 			return exitErr.ExitCode()
 		}

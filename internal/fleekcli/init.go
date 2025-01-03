@@ -5,9 +5,9 @@ package fleekcli
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/ublue-os/fleek/fin"
-	"github.com/ublue-os/fleek/internal/flake"
-	"github.com/ublue-os/fleek/internal/fleekcli/usererr"
+	"github.com/wrdls/fleek/fin"
+	"github.com/wrdls/fleek/internal/flake"
+	"github.com/wrdls/fleek/internal/fleekcli/usererr"
 )
 
 type initCmdFlags struct {

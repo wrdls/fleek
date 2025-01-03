@@ -7,9 +7,9 @@ import (
 	"os"
 
 	"github.com/go-git/go-git/v5"
-	"github.com/ublue-os/fleek/fin"
-	"github.com/ublue-os/fleek/internal/cmdutil"
-	fgit "github.com/ublue-os/fleek/internal/git"
+	"github.com/wrdls/fleek/fin"
+	"github.com/wrdls/fleek/internal/cmdutil"
+	fgit "github.com/wrdls/fleek/internal/git"
 )
 
 const gitbin = "git"

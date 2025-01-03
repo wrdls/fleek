@@ -9,10 +9,10 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"github.com/ublue-os/fleek/fin"
-	"github.com/ublue-os/fleek/internal/build"
-	"github.com/ublue-os/fleek/internal/envir"
-	"github.com/ublue-os/fleek/internal/vercheck"
+	"github.com/wrdls/fleek/fin"
+	"github.com/wrdls/fleek/internal/build"
+	"github.com/wrdls/fleek/internal/envir"
+	"github.com/wrdls/fleek/internal/vercheck"
 )
 
 type versionFlags struct {

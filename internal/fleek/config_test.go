@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ublue-os/fleek/internal/xdg"
+	"github.com/wrdls/fleek/internal/xdg"
 )
 
 func TestHostname(t *testing.T) {

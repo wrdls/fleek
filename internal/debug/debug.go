@@ -9,7 +9,7 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/pterm/pterm"
-	"github.com/ublue-os/fleek/fin"
+	"github.com/wrdls/fleek/fin"
 )
 
 var enabled bool

@@ -10,11 +10,11 @@ import (
 	"text/template"
 
 	"github.com/riywo/loginshell"
-	app "github.com/ublue-os/fleek"
-	"github.com/ublue-os/fleek/fin"
-	"github.com/ublue-os/fleek/internal/cmdutil"
-	"github.com/ublue-os/fleek/internal/debug"
-	"github.com/ublue-os/fleek/internal/fleek"
+	app "github.com/wrdls/fleek"
+	"github.com/wrdls/fleek/fin"
+	"github.com/wrdls/fleek/internal/cmdutil"
+	"github.com/wrdls/fleek/internal/debug"
+	"github.com/wrdls/fleek/internal/fleek"
 )
 
 const nixbin = "nix"

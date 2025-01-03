@@ -12,11 +12,11 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
-	"github.com/ublue-os/fleek/fin"
-	"github.com/ublue-os/fleek/internal/debug"
-	"github.com/ublue-os/fleek/internal/fleekcli/usererr"
-	"github.com/ublue-os/fleek/internal/ux"
-	"github.com/ublue-os/fleek/internal/verbose"
+	"github.com/wrdls/fleek/fin"
+	"github.com/wrdls/fleek/internal/debug"
+	"github.com/wrdls/fleek/internal/fleekcli/usererr"
+	"github.com/wrdls/fleek/internal/ux"
+	"github.com/wrdls/fleek/internal/verbose"
 )
 
 type VerboseMiddleware struct {

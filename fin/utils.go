@@ -3,7 +3,7 @@ package fin
 import (
 	"github.com/pterm/pterm"
 	"github.com/spf13/cobra"
-	"github.com/ublue-os/fleek/internal/build"
+	"github.com/wrdls/fleek/internal/build"
 )
 
 // generateTitleString generates a pretty looking title string.

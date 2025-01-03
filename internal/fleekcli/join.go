@@ -10,9 +10,9 @@ import (
 
 	cp "github.com/otiai10/copy"
 	"github.com/spf13/cobra"
-	"github.com/ublue-os/fleek/fin"
-	"github.com/ublue-os/fleek/internal/flake"
-	"github.com/ublue-os/fleek/internal/fleek"
+	"github.com/wrdls/fleek/fin"
+	"github.com/wrdls/fleek/internal/flake"
+	"github.com/wrdls/fleek/internal/fleek"
 	"gopkg.in/yaml.v3"
 )
 

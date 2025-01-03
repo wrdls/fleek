@@ -1,6 +1,6 @@
 # Fleek Configuration
 
-nix home-manager configs created by [fleek](https://github.com/ublue-os/fleek).
+nix home-manager configs created by [fleek](https://github.com/wrdls/fleek).
 
 ## Reference
 
@@ -19,4 +19,4 @@ $ apply-$(hostname)
 ```
 
 Your actual aliases are listed below:
-    fleeks = "cd ~/workspace/fleek/examples/high";
+fleeks = "cd ~/workspace/fleek/examples/high";

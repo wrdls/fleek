@@ -12,10 +12,10 @@ import (
 	"strings"
 
 	"github.com/hashicorp/go-version"
-	"github.com/ublue-os/fleek/fin"
-	"github.com/ublue-os/fleek/internal/cmdutil"
-	"github.com/ublue-os/fleek/internal/ux"
-	"github.com/ublue-os/fleek/internal/xdg"
+	"github.com/wrdls/fleek/fin"
+	"github.com/wrdls/fleek/internal/cmdutil"
+	"github.com/wrdls/fleek/internal/ux"
+	"github.com/wrdls/fleek/internal/xdg"
 	"gopkg.in/yaml.v3"
 )
 
