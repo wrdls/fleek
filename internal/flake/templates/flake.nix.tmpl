@@ -33,7 +33,7 @@
         pkgs = nixpkgs.legacyPackages.{{ .Arch }}-{{ .OS }}; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs; }; # Pass flake inputs to our config
         modules = [
-          ./home.nix 
+          ./home.nix
           ./path.nix
           ./shell.nix
           ./user.nix
@@ -43,11 +43,11 @@
           ./{{.Hostname}}/{{.User.Username}}.nix
           ./{{.Hostname}}/custom.nix
           # self-manage fleek
-          {
-            home.packages = [
-              fleek.packages.{{ .Arch }}-{{ .OS }}.default
-            ];
-          }
+          #{
+          #  home.packages = [
+          #    fleek.packages.{{ .Arch }}-{{ .OS }}.default
+          #  ];
+          #}
           ({
            nixpkgs.overlays = [{{ range $index, $element := $overlays }}inputs.{{$index}}.overlay {{ end }}];
           })
