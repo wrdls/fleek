@@ -22,6 +22,9 @@ snapshot:
 build:
   @go build -a -tags netgo -ldflags '-w -extldflags "-static"' github.com/wrdls/fleek/cmd/fleek
 
+install: build
+  cp ./fleek ~/.local/bin/fleek
+
 examples:
   [ -e "./fleek" ] || just build
   just example "none"
